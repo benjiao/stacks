@@ -2,9 +2,9 @@ services:
   app:
     image: ghcr.io/manyfold3d/manyfold:latest
     ports:
-      - 3214:3214
+      - ${MANYFOLD_PORT:-3214}:3214
     volumes:
-      - ${MANYFOLD_MODELS_DIRECTORY}:/models
+      - ${MANYFOLD_MODELS_DIRECTORY:manyfold_models}:/models
     environment:
       DATABASE_ADAPTER: postgresql
       DATABASE_HOST: postgres-server
@@ -35,7 +35,7 @@ services:
   postgres-server:
     image: postgres:15
     volumes:
-      - ${MANYFOLD_DB_DIRECTORY}:/var/lib/postgresql/data
+      - ${MANYFOLD_DB_DIRECTORY:-manyfold_db_data}:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: manyfold
       POSTGRES_PASSWORD: ${MANYFOLD_DB_PASSWORD}
