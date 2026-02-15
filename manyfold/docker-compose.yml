@@ -16,6 +16,8 @@ services:
       REDIS_URL: redis://redis-server:6379/1
       PUID: 1000
       PGID: 1000
+      MANYFOLD_HOST: ${MANYFOLD_HOST:-https://manyfold.benjiao.net}
+      RAILS_FORCE_SSL: ${MANYFOLD_FORCE_SSL:-true}
     restart: unless-stopped
     depends_on:
       - postgres-server
