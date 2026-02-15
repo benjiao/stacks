@@ -1,0 +1,83 @@
+mqtt:
+  enabled: false
+
+cameras:
+  cattio:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@192.168.0.158:554/stream1
+          roles:
+            - record
+            - detect
+    detect:
+      enabled: true
+      width: 640
+      height: 360
+      fps: 5   
+  porch:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@192.168.0.157:554/stream1
+          roles:
+            - detect
+            - record
+    detect:
+      enabled: true
+      width: 640
+      height: 360
+      fps: 5   
+  doorbell:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://{FRIGATE_RTSP_USER}:{FRIGATE_RTSP_PASSWORD}@192.168.0.171:554/stream2
+          roles:
+            - detect
+            - record
+    detect:
+      enabled: true
+      width: 1280
+      height: 960
+      fps: 5   
+
+objects:
+  track:
+    - person
+    - cat
+    - dog
+    - car
+    - motorcycle
+    - bicycle
+
+detectors:
+  cpu1:
+    type: cpu
+
+snapshots:
+  enabled: true
+  bounding_box: true
+  retain:
+    default: 7
+    objects:
+      person: 30
+      car: 30
+
+record:
+  enabled: True
+  retain:
+    days: 1
+    mode: all
+  alerts:
+    retain:
+      days: 3
+      mode: motion
+  detections:
+    retain:
+      days: 3
+      mode: motion
+
+detect:
+  enabled: true
+version: 0.16-0
