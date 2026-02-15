@@ -1,8 +1,8 @@
 # Stacks
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-- [**Manyfold**](manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future. 
-
+- [**Manyfold**](manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future.
+- **Uptime-kuma** - Uptime monitoring
 ## License
 
 This work is licensed under a
