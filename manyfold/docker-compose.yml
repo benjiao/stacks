@@ -4,7 +4,7 @@ services:
     ports:
       - ${MANYFOLD_PORT:-3214}:3214
     volumes:
-      - ${MANYFOLD_MODELS_DIRECTORY:manyfold_models}:/models
+      - ${MANYFOLD_MODELS_DIRECTORY:-manyfold_models}:/models
     environment:
       DATABASE_ADAPTER: postgresql
       DATABASE_HOST: postgres-server
