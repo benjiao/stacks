@@ -32,7 +32,7 @@ Here's is a high-level overview of the setup:
     - Woodpecker - CI/CD engine.
 - Proxmox
     - Containers
-        - NGINX Proxy Manager - Reverse proxy for internal services
+        - NGINX Proxy Manager - Reverse proxy for internal services. This allows me to route `*.benjiao.net` requests to the correct services.
         - Pi-hole - DNS and Ad-blocking service.
     - VMs
         - HomeAssistant - Home automation platform.
