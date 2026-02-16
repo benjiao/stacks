@@ -1,29 +1,26 @@
 # Homelab
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-## 1. Services
-### 1.1. Docker Stacks
-This is a collection of Docker Compose configs that I use to setup stacks in my Portainer installtion.
+## Philosophy
+This homelab is my place to self-host stuff and learn how it all works.
+I keep it around to make my day-to-day easier, while still getting to tinker
+and understand the systems I run.
 
-- [**Frigate**](docker/frigate/README.md) - Security camera feed processing, archiving, and object identification.
-- [**Manyfold**](docker/manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future.
-- [**N8N**](docker/n8n/README.md) - Workflow automation.
-- [**Registry**](docker/registry/README.md) - Local Docker container registry.
-- [**Uptime Kuma**](docker/uptime-kuma/README.md) - Uptime monitoring.
+## Docs
+- [Architecture](docs/architecture.md)
+- [Network](docs/network.md)
+- [Docker](docker/README.md)
+    - [**Frigate**](docker/frigate/README.md) - Security camera feed processing, archiving, and object identification.
+    - **Gitea** - Git hosting service 
+    - **Homepage** - Application dashboard for all of my homelab services.
+    - [**Manyfold**](docker/manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future.
+    - [**N8N**](docker/n8n/README.md) - Workflow automation.
+    - [**Registry**](docker/registry/README.md) - Local Docker container registry.
+    - [**Uptime Kuma**](docker/uptime-kuma/README.md) - Uptime monitoring.
+    - **Wswsws** - Cat shelter management software. This is a personal project that I will be releasing as open-source in the future.
+    - **Woodpecker** - CI/CD engine.
 
-### 1.2. Proxmox
-#### 1.2.1. Containers
-- **Pi-hole**
-- **NginxProxyManager**
-
-#### 1.2.2. VMs
-- **HomeAssistant**
-- **Immich**
-
-## 2. Architecture
-## 3. Network
-
-## 4. License
+## License
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
