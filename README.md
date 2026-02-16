@@ -7,8 +7,11 @@ I keep it around to make my day-to-day easier, while still getting to tinker
 and understand the systems I run.
 
 ## Docs
+- [Ansible](ansible/README.md)
 - [Architecture](docs/architecture.md)
 - [Network](docs/network.md)
+
+## Services
 - Docker
     - [Frigate](docker/frigate/README.md) - Security camera feed processing, archiving, and object identification.
     - Gitea - Git hosting service 
