@@ -17,7 +17,7 @@ My homelab runs on a mix of Raspberry Pis and servers built out of old PC hardwa
 Here's is a high-level overview of the setup:
 
 
-![Architecture Diagram](docs/architecture.svg)
+![Architecture Overview Diagram](docs/overview.svg)
 
 ## Services
 - Docker
