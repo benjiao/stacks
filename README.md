@@ -7,9 +7,10 @@ This is a collection of Docker Compose configs that I use to setup stacks in my 
 - [**Frigate**](docker/frigate/README.md) - Security camera feed processing, archiving, and object identification.
 - [**Manyfold**](docker/manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future.
 - [**N8N**](docker/n8n/README.md) - Workflow automation.
+- [**Registry**](docker/registry/README.md) - Local Docker container registry.
 - [**Uptime Kuma**](docker/uptime-kuma/README.md) - Uptime monitoring.
-## License
 
+## License
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
