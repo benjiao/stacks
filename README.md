@@ -8,8 +8,16 @@ and understand the systems I run.
 
 ## Docs
 - [Ansible](ansible/README.md)
-- [Architecture](docs/architecture.md)
+- [Architecture](#architecture)
 - [Network](docs/network.md)
+
+## Architecture Overview
+My homelab runs on a mix of Raspberry Pis and physical servers. I manage my containers using Portainer and Proxmox VE (PVE), letting me easily organize and run services across all devices.
+
+Here's is a high-level overview of the setup:
+
+
+![Architecture Diagram](docs/architecture.svg)
 
 ## Services
 - Docker
