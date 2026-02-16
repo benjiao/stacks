@@ -22,14 +22,14 @@ Here's is a high-level overview of the setup:
 ## Services
 - Docker
     - [Frigate](docker/frigate/README.md) - Security camera feed processing, archiving, and object identification.
-    - Gitea - Git hosting service 
+    - [Gitea](docker/gitea/README.md) - Git hosting service 
     - Homepage - Application dashboard for all of my homelab services.
     - [Manyfold](docker/manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future.
     - [N8N](docker/n8n/README.md) - Workflow automation.
     - [Registry](docker/registry/README.md) - Local Docker container registry.
     - [Uptime Kuma](docker/uptime-kuma/README.md) - Uptime monitoring.
     - Wswsws - Cat shelter management software. This is a personal project that I will be releasing as open-source in the future.
-    - Woodpecker - CI/CD engine.
+    - [Woodpecker](docker/woodpecker/README) - CI/CD engine.
 - Proxmox
     - Containers
         - NGINX Proxy Manager - Reverse proxy for internal services. This allows me to route `*.benjiao.net` requests to the correct services.
