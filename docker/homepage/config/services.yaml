@@ -49,16 +49,10 @@
         href: https://grafana.benjiao.net
         description: Monitoring and observability
         icon: grafana
-        proxmoxNode: pve
-        proxmoxVMID: 103
-        proxmoxType: lxc
     - Prometheus:
-        href: http://192.168.0.14:9090/query
+        href: http://prometheus.benjiao.net
         description: Monitoring and alerting toolkit
         icon: prometheus
-        proxmoxNode: pve
-        proxmoxVMID: 102
-        proxmoxType: lxc
     - Uptime Kuma:
         href: https://uptime.benjiao.net
         description: Status monitoring
