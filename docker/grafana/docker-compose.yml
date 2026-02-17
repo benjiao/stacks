@@ -21,6 +21,7 @@ services:
     command:
       - '--config.file=/etc/prometheus_config/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.size=100GB'
       - '--web.console.libraries=/etc/prometheus_config/console_libraries'
       - '--web.console.templates=/etc/prometheus_config/consoles'
       - '--web.enable-lifecycle'
