@@ -1,0 +1,17 @@
+services:
+  server:
+    restart: unless-stopped
+    image: mobiusoffice/evergreen-ils:latest
+    container_name: evergreen
+    hostname: evergreen.benjiao.net
+    volumes:
+      - evergreen_data:/home/opensrf/repos/Evergreen
+    ports:
+      - "80:80"
+      - "210:210"
+      - "6001:6001"
+      - "443:443"
+      - "32:22"
+      - "5433:5432"
+volumes:
+  evergreen_data:
