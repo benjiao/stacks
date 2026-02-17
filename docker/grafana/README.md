@@ -1,5 +1,5 @@
 # Grafana and Prometheus
-A Grafana + Prometheus stack that I used for monitoring machines in my homelab.
+A Grafana + Prometheus stack that I use for monitoring machines in my homelab.
 
 ![Grafana Screenshot](images/grafana.png)
 
