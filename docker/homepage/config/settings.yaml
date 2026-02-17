@@ -3,5 +3,5 @@
 # https://gethomepage.dev/configs/settings/
 
 providers:
-  openweathermap: ${HOMEPAGE_OPENWEATHERMAP_API_KEY}
-  weatherapi: ${HOMEPAGE_WEATHERAPI_API_KEY}
+  openweathermap: {{HOMEPAGE_VAR_OPENWEATHERMAP_API_KEY}}
+  weatherapi: {{HOMEPAGE_VAR_WEATHERAPI_API_KEY}}
