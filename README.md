@@ -20,23 +20,26 @@ Here's is a high-level overview of the setup:
 ![Architecture Overview Diagram](docs/overview.svg)
 
 ## Services
-- Docker
-    - [Frigate](docker/frigate/README.md) - Security camera feed processing, archiving, and object identification.
-    - [Gitea](docker/gitea/README.md) - Git hosting service 
-    - [Homepage](docker/homepage/README.md) - Application dashboard for all of my homelab services.
-    - [Manyfold](docker/manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future.
-    - [N8N](docker/n8n/README.md) - Workflow automation.
-    - [Registry](docker/registry/README.md) - Local Docker container registry.
-    - [Uptime Kuma](docker/uptime-kuma/README.md) - Uptime monitoring.
-    - Wswsws - Cat shelter management software. This is a personal project that I will be releasing as open-source in the future.
-    - [Woodpecker](docker/woodpecker/README) - CI/CD engine.
-- Proxmox
-    - Containers
-        - NGINX Proxy Manager - Reverse proxy for internal services. This allows me to route `*.benjiao.net` requests to the correct services.
-        - Pi-hole - DNS and Ad-blocking service.
-    - VMs
-        - HomeAssistant - Home automation platform.
-        - Immich - Photo and video management.
+### Docker
+- [Frigate](docker/frigate/README.md) - Security camera feed processing, archiving, and object identification.
+- [Gitea](docker/gitea/README.md) - Git hosting service
+- [Grafana](docker/grafana/README.md) - Observability platform for visualizing machine analytics. I use it to monitor my servers.
+- [Homepage](docker/homepage/README.md) - Application dashboard for all of my homelab services.
+- [Manyfold](docker/manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future.
+- [N8N](docker/n8n/README.md) - Workflow automation.
+- [Prometheus](docker/grafana/README.md) - Event monitoring and alerting software with timeseries database. I use it to store machine stats to be used by [Grafana](docker/grafana/README.md).
+- [Registry](docker/registry/README.md) - Local Docker container registry.
+- [Uptime Kuma](docker/uptime-kuma/README.md) - Uptime monitoring.
+- Wswsws - Cat shelter management software. This is a personal project that I will be releasing as open-source in the future.
+- [Woodpecker](docker/woodpecker/README) - CI/CD engine.
+
+### Proxmox
+- Containers
+    - NGINX Proxy Manager - Reverse proxy for internal services. This allows me to route `*.benjiao.net` requests to the correct services.
+    - Pi-hole - DNS and Ad-blocking service.
+- VMs
+    - HomeAssistant - Home automation platform.
+    - Immich - Photo and video management.
 
 Camera feeds are being processed by [Frigate](docker/frigate/README.md). Climate sensors are being ingested by HomeAssistant. Smart Plugs and Lights are being controlled by HomeAssistant.
 
