@@ -1,4 +1,4 @@
 ---
 url: https://192.168.0.85:8006
-token: ${PROXMOX_TOKEN}
-secret: ${PROXMOX_SECRET}
+token: ${HOMEPAGE_PROXMOX_TOKEN}
+secret: ${HOMEPAGE_PROXMOX_SECRET}
