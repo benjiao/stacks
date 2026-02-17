@@ -1,0 +1,125 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Services:
+    - Frigate:
+        href: https://cameras.benjiao.net
+        description: AI-powered camera surveillance
+        icon: frigate
+        proxmoxNode: pve
+        proxmoxVMID: 104
+    - HomeAssistant:
+        href: https://homeassistant.benjiao.net
+        description: Home automation
+        icon: home-assistant
+        proxmoxNode: pve
+        proxmoxVMID: 101
+    - n8n:
+        href: https://n8n.benjiao.net
+        description: Workflow automation
+        icon: n8n
+    - Mainsail:
+        href: https://mainsail.benjiao.net
+        description: 3D printer management
+        icon: mainsail
+    - Wswsws:
+        href: https://wswsws.benjiao.net
+        description: Cat shelter management
+        icon: mdi-cat
+- Development:
+    - Gitea :
+        href: https://git.benjiao.net
+        description: Git repository management
+        icon: gitea
+    - Woodpecker:
+        href: https://woodpecker.benjiao.net
+        description: CI/CD platform
+        icon: woodpecker-ci
+- Server Management:
+    - Portainer:
+        href: https://portainer.benjiao.net
+        description: Container Management
+        icon: portainer
+    - Proxmox:
+        href: https://pve.benjiao.net
+        description: Virtual Environment
+        icon: proxmox
+    - Grafana:
+        href: https://grafana.benjiao.net
+        description: Monitoring and observability
+        icon: grafana
+        proxmoxNode: pve
+        proxmoxVMID: 103
+        proxmoxType: lxc
+    - Prometheus:
+        href: http://192.168.0.14:9090/query
+        description: Monitoring and alerting toolkit
+        icon: prometheus
+        proxmoxNode: pve
+        proxmoxVMID: 102
+        proxmoxType: lxc
+    - Uptime Kuma:
+        href: https://uptime.benjiao.net
+        description: Status monitoring
+        icon: uptime-kuma
+
+- Networking:
+    - Pihole:
+        href: https://pihole.benjiao.net/admin
+        description: DNS and Ad Blocking
+        icon: pi-hole
+    - NginxProxyManager:
+        href: https://proxy.benjiao.net
+        description: Reverse Proxy
+        icon: nginx
+    - Cloudflare Dashboard:
+        href: https://dash.cloudflare.com/
+        description: SSL Management
+        icon: cloudflare
+    - Tailscale:
+        href: https://login.tailscale.com/admin/machines?refreshed=true
+        description: Zero-configuration VPN
+        icon: tailscale
+    - TP-Link Router:
+        href: http://192.168.0.1
+        description: Router Admin Page
+        icon: tp-link
+- Media:
+    - Immich:
+        href: https://immich.benjiao.net
+        description: Photo and video backup
+        icon: immich
+        proxmoxNode: pve
+        proxmoxVMID: 105
+    - Jellyfin:
+        href: https://tv.benjiao.net
+        description: Media streaming
+        icon: jellyfin
+        proxmoxNode: pve
+        proxmoxVMID: 107
+        proxmoxType: lxc
+- Files:
+    - Syncthing:
+        href: https://syncthing.benjiao.net
+        description: File sync service
+        icon: syncthing
+        proxmoxNode: pve
+        proxmoxVMID: 108
+        proxmoxType: lxc
+    - qBittorrent:
+        href: https://torrent.benjiao.net
+        description: Torrent management
+        icon: qbittorrent
+        proxmoxNode: pve
+        proxmoxVMID: 106
+        proxmoxType: lxc
+- AI Tools:
+    - Open WebUI:
+        href: https://ai.benjiao.net
+        description: Web interface for large language models
+        icon: open-webui
+    - OpenAI Usage:
+        href: https://platform.openai.com/settings/organization/usage
+        description: Usage statistics and insights
+        icon: openai

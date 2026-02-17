@@ -1,0 +1,12 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - ${PORT:-3000}:3000
+    volumes:
+      - ${CONFIG_PATH}:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      HOMEPAGE_ALLOWED_HOSTS: home.benjiao.net
+    restart: unless-stopped

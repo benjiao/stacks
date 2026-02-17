@@ -23,7 +23,7 @@ Here's is a high-level overview of the setup:
 - Docker
     - [Frigate](docker/frigate/README.md) - Security camera feed processing, archiving, and object identification.
     - [Gitea](docker/gitea/README.md) - Git hosting service 
-    - Homepage - Application dashboard for all of my homelab services.
+    - [Homepage](docker/homepage/README.md) - Application dashboard for all of my homelab services.
     - [Manyfold](docker/manyfold/README.md) - 3D-model inventory management. This is where I keep all the models (both 3rd-party and original) that I've printed previously and that I might want to print again in the future.
     - [N8N](docker/n8n/README.md) - Workflow automation.
     - [Registry](docker/registry/README.md) - Local Docker container registry.

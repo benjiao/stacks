@@ -1,0 +1,27 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Social:
+    - Facebook:
+        - icon: facebook.png
+          href: https://facebook.com/
+
+    - Instagram:
+        - icon: instagram.png
+          href: https://instagram.com/
+
+    - Reddit:
+        - icon: reddit.png
+          href: https://reddit.com/
+
+- Developer:
+    - Github:
+        - icon: github.png
+          href: https://github.com/benjiao
+
+
+- Entertainment:
+    - YouTube:
+        - icon: youtube.png
+          href: https://youtube.com/
