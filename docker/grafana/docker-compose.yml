@@ -39,6 +39,8 @@ services:
       - '${GRAFANA_PORT:-3000}:3000'
     volumes:
       - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SERVER_ROOT_URL=https://grafana.benjiao.net/
     networks:
       - monitoring
 
