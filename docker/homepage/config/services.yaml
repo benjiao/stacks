@@ -92,13 +92,7 @@
         icon: immich
         proxmoxNode: pve
         proxmoxVMID: 105
-    - Jellyfin:
-        href: https://tv.benjiao.net
-        description: Media streaming
-        icon: jellyfin
-        proxmoxNode: pve
-        proxmoxVMID: 107
-        proxmoxType: lxc
+
 - Files:
     - Syncthing:
         href: https://syncthing.benjiao.net
@@ -106,13 +100,6 @@
         icon: syncthing
         proxmoxNode: pve
         proxmoxVMID: 108
-        proxmoxType: lxc
-    - qBittorrent:
-        href: https://torrent.benjiao.net
-        description: Torrent management
-        icon: qbittorrent
-        proxmoxNode: pve
-        proxmoxVMID: 106
         proxmoxType: lxc
 - AI Tools:
     - Open WebUI:

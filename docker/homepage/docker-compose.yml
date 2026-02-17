@@ -9,4 +9,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       HOMEPAGE_ALLOWED_HOSTS: home.benjiao.net
+      PROXMOX_TOKEN: ${PROXMOX_TOKEN}
+      PROXMOX_SECRET: ${PROXMOX_SECRET}
+      OPENWEATHERMAP_API_KEY: ${OPENWEATHERMAP_API_KEY}
+      WEATHERAPI_API_KEY: ${WEATHERAPI_API_KEY}
     restart: unless-stopped
