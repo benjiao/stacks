@@ -39,6 +39,19 @@
 # Do not expect support for customizations that are not part of the standard InvenTree setup!
 
 services:
+    # Fetch config files from git
+    git-checkout:
+    image: bitnami/git:latest
+    working_dir: /temp
+    command: >
+        bash -c "
+        git clone https://github.com/benjiao/homelab.git &&
+        cp ./homelab/docker/inventree/Caddyfile /srv/docker/inventree_config/Caddyfile
+        "
+    volumes:
+        - homepage_config:/etc/homepage_config
+
+
     # Database service
     # Use PostgreSQL as the database backend
     inventree-db:
@@ -140,7 +153,7 @@ services:
             - INVENTREE_ALLOWED_HOSTS=${INVENTREE_ALLOWED_HOSTS}
             - INVENTREE_CORS_ORIGIN_ALLOW_ALL=${INVENTREE_CORS_ORIGIN_ALLOW_ALL}
         volumes:
-            - ./Caddyfile:/etc/caddy/Caddyfile:ro,z
+            - /srv/docker/inventree_config/Caddyfile:/etc/caddy/Caddyfile:ro,z
             - ${INVENTREE_EXT_VOLUME}/static:/var/www/static:z
             - ${INVENTREE_EXT_VOLUME}/media:/var/www/media:z
             - ${INVENTREE_EXT_VOLUME}:/var/log:z
