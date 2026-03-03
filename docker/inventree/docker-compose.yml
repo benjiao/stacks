@@ -41,15 +41,15 @@
 services:
     # Fetch config files from git
     git-checkout:
-    image: bitnami/git:latest
-    working_dir: /temp
-    command: >
-        bash -c "
-        git clone https://github.com/benjiao/homelab.git &&
-        cp ./homelab/docker/inventree/Caddyfile /srv/docker/inventree_config/Caddyfile
-        "
-    volumes:
-        - homepage_config:/etc/homepage_config
+        image: bitnami/git:latest
+        working_dir: /temp
+        command: >
+            bash -c "
+            git clone https://github.com/benjiao/homelab.git &&
+            cp ./homelab/docker/inventree/Caddyfile /srv/docker/inventree_config/Caddyfile
+            "
+        volumes:
+            - homepage_config:/etc/homepage_config
 
 
     # Database service
