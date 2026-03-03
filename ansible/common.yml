@@ -1,0 +1,4 @@
+---
+- hosts: debian_servers
+  roles:
+    - benjiao.common

@@ -1,0 +1,44 @@
+nfs_share_mounts:
+  - path: /mnt/data
+    location: 192.168.0.85:/nas/data
+    status: present
+
+  - path: /mnt/wswsws
+    location: 192.168.0.85:/nas/wswsws
+    owner: "nobody"
+    group: "nogroup"
+    mode: "0777"
+
+  - path: /mnt/wswsws_backups
+    location: 192.168.0.85:/nas/wswsws_backups
+    owner: "nobody"
+    group: "nogroup"
+    mode: "0777"
+
+  - path: /mnt/registry
+    location: 192.168.0.85:/nas/registry
+    owner: "nobody"
+    group: "nogroup"
+    mode: "0777"
+    
+  - path: /mnt/gitea
+    location: 192.168.0.85:/nas/gitea
+    owner: "1000"
+    group: "1000"
+    mode: "0777"
+    recurse: yes
+
+nmcli_config:
+  conn_name: "Wired connection 1"
+  ifname: "eth0"
+  type: "ethernet"
+  ip4: "192.168.0.31/24"
+  gw4: "192.168.0.1"
+  dns4: "192.168.0.10"
+  state: "present"
+  method4: "manual"
+
+stressberry:
+  virtualenv: /home/benjiao/stressberry-env
+
+portainer_data_dir: /opt/portainer/data

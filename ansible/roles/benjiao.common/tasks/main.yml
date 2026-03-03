@@ -1,0 +1,31 @@
+---
+- name: Updates apt cache
+  when: ansible_os_family == 'Debian'
+  become: true
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600 # Update cache if older than 1 hour
+
+- name: Updates apt cache and upgrades packages
+  tags: update
+  when: ansible_os_family == 'Debian'
+  become: true
+  apt:
+    upgrade: yes
+    update_cache: yes
+
+- name: Ensure basic tools are installed
+  become: true
+  apt:
+    name:
+      - sudo
+      - ntp
+      - htop
+      - btop
+      - tmux
+      - git
+      - curl
+      - vim
+
+- name: Include user management tasks
+  include_tasks: users.yml

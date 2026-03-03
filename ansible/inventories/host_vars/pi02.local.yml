@@ -1,0 +1,27 @@
+nfs_share_mounts:
+  - path: /mnt/data
+    location: 192.168.0.85:/nas/data
+    status: present
+
+  - path: /mnt/n8n
+    location: 192.168.0.85:/nas/n8n
+    status: present
+
+  - path: /mnt/wswsws_backups
+    location: 192.168.0.85:/nas/wswsws_backups
+    owner: "nobody"
+    group: "nogroup"
+    mode: "0777"
+    
+nmcli_config:
+  conn_name: "Wired connection 1"
+  ifname: "eth0"
+  type: "ethernet"
+  ip4: "192.168.0.33/24"
+  gw4: "192.168.0.1"
+  dns4: "192.168.0.10"
+  state: "present"
+  method4: "manual"
+
+stressberry:
+  virtualenv: /home/benjiao/stressberry-env

@@ -1,0 +1,15 @@
+[debian_servers]
+immich.local
+pve.local
+pi01.local
+pi02.local
+frigate.local
+
+[prometheus_targets]
+pve.local
+pihole.local
+immich.local
+syncthing.local
+pi01.local
+pi02.local
+nginxproxymanager.local

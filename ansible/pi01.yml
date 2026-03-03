@@ -1,0 +1,19 @@
+- name: Prepare directories for gitea installation
+  hosts:
+    - pi01.local
+  become: true
+  vars:
+    docker_directories:
+      - /srv/docker/vaultwarden
+      - /srv/docker/inventree
+
+  tasks:
+    - name: Create directories for Docker containers
+      file:
+        path: "{{ item }}"
+        state: directory
+        owner: 1000
+        group: 1000
+        mode: '0750'
+        recurse: yes
+      loop: '{{ docker_directories }}'
