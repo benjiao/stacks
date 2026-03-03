@@ -46,10 +46,10 @@ services:
         command: >
             bash -c "
             git clone https://github.com/benjiao/homelab.git &&
-            cp ./homelab/docker/inventree/Caddyfile /srv/docker/inventree_config/Caddyfile
+            cp ./homelab/docker/inventree/Caddyfile /etc/caddy_config/Caddyfile
             "
         volumes:
-            - homepage_config:/etc/homepage_config
+            - caddy_config:/etc/caddy_config
 
 
     # Database service
@@ -153,9 +153,11 @@ services:
             - INVENTREE_ALLOWED_HOSTS=${INVENTREE_ALLOWED_HOSTS}
             - INVENTREE_CORS_ORIGIN_ALLOW_ALL=${INVENTREE_CORS_ORIGIN_ALLOW_ALL}
         volumes:
-            - /srv/docker/inventree_config/:/etc/caddy/:ro,z
+            - caddy_config:/etc/caddy/:ro,z
             - ${INVENTREE_EXT_VOLUME}/static:/var/www/static:z
             - ${INVENTREE_EXT_VOLUME}/media:/var/www/media:z
             - ${INVENTREE_EXT_VOLUME}:/var/log:z
             - ${INVENTREE_EXT_VOLUME}:/data:z
             - ${INVENTREE_EXT_VOLUME}:/config:z
+volumes:
+  caddy_config:
