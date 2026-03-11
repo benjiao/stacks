@@ -27,24 +27,6 @@
         href: https://wswsws.benjiao.net
         description: Cat shelter management
         icon: mdi-cat
-- Development:
-    - Gitea :
-        href: https://git.benjiao.net
-        description: Git repository management
-        icon: gitea
-    - Woodpecker:
-        href: https://woodpecker.benjiao.net
-        description: CI/CD platform
-        icon: woodpecker-ci
-- Workshop Management:
-    - Inventree :
-        href: https://inventree.benjiao.net
-        description: Inventory management
-        icon: inventree
-    - Manyfold:
-        href: https://manyfold.benjiao.net
-        description: 3D model management
-        icon: manyfold
 - Server Management:
     - Portainer:
         href: https://portainer.benjiao.net
@@ -88,6 +70,27 @@
         href: http://192.168.0.1
         description: Router Admin Page
         icon: tp-link
+
+- Development:
+    - Gitea :
+        href: https://git.benjiao.net
+        description: Git repository management
+        icon: gitea
+    - Woodpecker:
+        href: https://woodpecker.benjiao.net
+        description: CI/CD platform
+        icon: woodpecker-ci
+
+- Workshop Management:
+    - Inventree :
+        href: https://inventree.benjiao.net
+        description: Inventory management
+        icon: inventree
+    - Manyfold:
+        href: https://manyfold.benjiao.net
+        description: 3D model management
+        icon: manyfold
+
 - Media:
     - Immich:
         href: https://immich.benjiao.net
