@@ -36,6 +36,15 @@
         href: https://woodpecker.benjiao.net
         description: CI/CD platform
         icon: woodpecker-ci
+- Workshop Management:
+    - Inventree :
+        href: https://inventree.benjiao.net
+        description: Inventory management
+        icon: inventree
+    - Manyfold:
+        href: https://manyfold.benjiao.net
+        description: 3D model management
+        icon: manyfold
 - Server Management:
     - Portainer:
         href: https://portainer.benjiao.net

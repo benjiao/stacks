@@ -23,3 +23,13 @@
         pip_install_packages:
           - name: psycopg2-binary
             virtualenv: /opt/inventree/env
+  tasks:
+    - name: Install packages
+      become: true
+      ansible.builtin.apt:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      loop:
+        - poppler-utils
+        - fonts-dejavu-core
